@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Medieval — Cortes de Nobreza</title>
+    <style>
+        /* ===== ESTILO GERAL ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        body {
+            background: linear-gradient(160deg, #e07b39 0%, #c95a1e 50%, #a8430e 100%);
+            min-height: 100vh;
+            color: #3a1d0a;
+        }
+
+        /* ===== CABEÇALHO ===== */
+        header {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+
+        header .coroa {
+            font-size: 50px;
+        }
+
+        h1 {
+            font-size: 52px;
+            color: #2b1000;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.25);
+        }
+
+        header p {
+            font-size: 20px;
+            font-style: italic;
+            color: #5c2d0d;
+            margin-top: 8px;
+        }
+
+        .divisor {
+            width: 220px;
+            height: 3px;
+            background: #2b1000;
+            margin: 25px auto;
+            position: relative;
+        }
+
+        .divisor::after {
+            content: "⚔";
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #d96a25;
+            padding: 0 12px;
+            font-size: 22px;
+        }
+
+        /* ===== CARTÕES DE CORTES ===== */
+        .cortes {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            padding: 20px 30px 50px;
+        }
+
+        .cartao {
+            background: #fdf3e3;
+            border: 3px solid #2b1000;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 6px 6px 0 rgba(43, 16, 0, 0.55);
+            transition: transform 0.25s ease;
+        }
+
+        .cartao:hover {
+            transform: translateY(-8px);
+        }
+
+        .cartao img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border: 2px solid #2b1000;
+            border-radius: 6px;
+        }
+
+        .cartao h2 {
+            margin: 15px 0 5px;
+            font-size: 24px;
+            color: #2b1000;
+        }
+
+        .cartao .descricao {
+            font-size: 15px;
+            font-style: italic;
+            color: #7a4a1f;
+            margin-bottom: 12px;
+        }
+
+        /* ===== TABELA DE PREÇOS ===== */
+        .precos {
+            list-style: none;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .precos li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 6px;
+            border-bottom: 1px dashed #b07840;
+            font-size: 16px;
+        }
+
+        .precos li:last-child {
+            border-bottom: none;
+        }
+
+        .precos .valor {
+            font-weight: bold;
+            color: #a8430e;
+        }
+
+        /* ===== RODAPÉ ===== */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: rgba(43, 16, 0, 0.85);
+            color: #f5d9b8;
+            font-size: 17px;
+        }
+
+        footer a {
+            color: #ffb066;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== ABA BARBEARIA ===== -->
+    <div id="aba-barbearia">
+
+    <!-- ===== CABEÇALHO ===== -->
+    <header>
+        <div class="coroa">👑</div>
+        <h1>Barbearia Medieval</h1>
+        <p>Cortes dignos de reis, cavaleiros e guerreiros</p>
+        <div class="divisor"></div>
+    </header>
+
+    <!-- ===== SEÇÃO DE CORTES ===== -->
+    <section class="cortes">
+
+        <!-- Corte 1 -->
+        <div class="cartao">
+            <img src="https://sspark.genspark.ai/i/MEz7V3olF9UxXWuV?width=800" alt="Corte Viking com barba trançada">
+            <h2>⚔️ Corte Viking</h2>
+            <p class="descricao">Estilo guerreiro nórdico com barba trançada</p>
+            <ul class="precos">
+                <li><span>Corte simples</span> <span class="valor">R$ 45</span></li>
+                <li><span>Corte + barba</span> <span class="valor">R$ 70</span></li>
+                <li><span>Combo completo</span> <span class="valor">R$ 90</span></li>
+            </ul>
+        </div>
+
+        <!-- Corte 2 -->
+        <div class="cartao">
+            <img src="https://sspark.genspark.ai/i/W1FHNpI4JzXAfbFR?width=800" alt="Corte do Cavaleiro com barba rústica">
+            <h2>🛡️ Corte do Cavaleiro</h2>
+            <p class="descricao">Undercut medieval com barba rústica</p>
+            <ul class="precos">
+                <li><span>Corte simples</span> <span class="valor">R$ 50</span></li>
+                <li><span>Corte + barba</span> <span class="valor">R$ 75</span></li>
+                <li><span>Combo completo</span> <span class="valor">R$ 95</span></li>
+            </ul>
+        </div>
+
+        <!-- Corte 3 -->
+        <div class="cartao">
+            <img src="https://sspark.genspark.ai/i/6P3c7aiicdlCQ6SH?width=800" alt="Corte do Nobre clássico">
+            <h2>👑 Corte do Nobre</h2>
+            <p class="descricao">O clássico da realeza, elegante e imponente</p>
+            <ul class="precos">
+                <li><span>Corte simples</span> <span class="valor">R$ 55</span></li>
+                <li><span>Corte + barba</span> <span class="valor">R$ 80</span></li>
+                <li><span>Combo real</span> <span class="valor">R$ 100</span></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer>
+        <p>⚒️ <strong>Barbearia Medieval</strong> — Forjando estilos desde 1347 ⚒️</p>
+        <p>Agende seu corte: <a href="https://www.instagram.com/" target="_blank">@barbeariamedieval</a></p>
+    </footer>
+
+    <!-- ===== LINK PARA RECLAMAÇÕES E SUGESTÕES ===== -->
+    <div style="text-align:center; padding:18px 20px 30px;">
+        <a href="#" data-aba="reclamacoes" style="display:inline-block; background:#fdf3e3; color:#2b1000; border:3px solid #2b1000; border-radius:8px; padding:12px 26px; font-size:17px; font-weight:bold; letter-spacing:1px; text-decoration:none; box-shadow:4px 4px 0 rgba(43,16,0,0.55); cursor:pointer;">⚖️ Reclamações e Sugestões</a>
+    </div>
+
+    </div><!-- /aba-barbearia -->
+
+    <!-- ===== ABA RECLAMAÇÕES E SUGESTÕES ===== -->
+    <div id="aba-reclamacoes" style="display:none; text-align:center; padding:50px 20px;">
+        <h2 style="font-size:36px; color:#2b1000; letter-spacing:3px; text-transform:uppercase; text-shadow:2px 2px 0 rgba(255,255,255,0.25);">⚖️ Reclamações e Sugestões</h2>
+        <p style="font-size:19px; font-style:italic; color:#5c2d0d; margin:10px 0 25px;">Sua palavra tem valor de ouro perante a coroa</p>
+        <form onsubmit="event.preventDefault(); alert('Mensagem enviada! A coroa agradece. ⚔️'); this.reset();" style="max-width:520px; margin:0 auto; background:#fdf3e3; border:3px solid #2b1000; border-radius:10px; padding:25px; box-shadow:6px 6px 0 rgba(43,16,0,0.55); text-align:left;">
+            <label style="font-weight:bold; color:#2b1000;">Nome do nobre:</label><br>
+            <input type="text" required style="width:100%; padding:10px; margin:8px 0 15px; border:2px solid #2b1000; border-radius:6px; font-family:Georgia, serif; background:#fffaf0;">
+            <label style="font-weight:bold; color:#2b1000;">Reclamação ou sugestão:</label><br>
+            <textarea required rows="5" style="width:100%; padding:10px; margin:8px 0 18px; border:2px solid #2b1000; border-radius:6px; font-family:Georgia, serif; background:#fffaf0; resize:vertical;"></textarea>
+            <button type="submit" style="background:#2b1000; color:#f5d9b8; border:none; border-radius:6px; padding:12px 28px; font-family:Georgia, serif; font-size:16px; font-weight:bold; letter-spacing:1px; cursor:pointer;">Enviar 📜</button>
+        </form>
+        <p style="margin-top:28px;">
+            <a href="#" data-aba="barbearia" style="display:inline-block; background:#fdf3e3; color:#2b1000; border:3px solid #2b1000; border-radius:8px; padding:12px 26px; font-size:17px; font-weight:bold; letter-spacing:1px; text-decoration:none; box-shadow:4px 4px 0 rgba(43,16,0,0.55); cursor:pointer;">⚔️ Voltar para a Barbearia</a>
+        </p>
+    </div>
+
+    <script>
+        document.querySelectorAll('[data-aba]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                var destino = this.getAttribute('data-aba');
+                document.getElementById('aba-barbearia').style.display = (destino === 'barbearia') ? 'block' : 'none';
+                document.getElementById('aba-reclamacoes').style.display = (destino === 'reclamacoes') ? 'block' : 'none';
+                window.scrollTo(0, 0);
+            });
+        });
+    </script>
+
+</body>
+</html>
